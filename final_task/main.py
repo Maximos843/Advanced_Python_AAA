@@ -6,7 +6,7 @@ from telegram.ext import (
     CommandHandler,
     ConversationHandler,
 )
-from utils import start, game, GameVariables
+from game_functions import start, game, GameVariables
 
 
 logger = CustomLogger().create_logger(__name__)

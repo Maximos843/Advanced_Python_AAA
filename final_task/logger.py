@@ -4,14 +4,14 @@ import logging
 class CustomLogger:
     def _get_handlers(self) -> list[logging.Handler]:
         formatter = logging.Formatter(
-            fmt="[%(asctime)s] %(levelname)s : [%(name)s] : %(message)s",
-            datefmt="%Y-%M-%d %H:%M:%S",
+            fmt='[%(asctime)s] %(levelname)s : [%(name)s] : %(message)s',
+            datefmt='%Y-%M-%d %H:%M:%S',
         )
-        handler_file = logging.FileHandler(filename='tic-tac-toe.log', mode='w')
-        handler_file.setLevel(logging.DEBUG)
+        handler_file = logging.FileHandler(filename='final_task/tic-tac-toe.log', mode='w')
+        handler_file.setLevel(logging.INFO)
         handler_file.setFormatter(formatter)
         handler_stream = logging.StreamHandler()
-        handler_stream.setLevel(logging.DEBUG)
+        handler_stream.setLevel(logging.INFO)
         handler_stream.setFormatter(formatter)
         return [handler_file, handler_stream]
 
